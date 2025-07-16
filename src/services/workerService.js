@@ -1,4 +1,4 @@
-const User = require("../models/User");
+import User from "../models/User.js";
 
 class WorkerService {
     static async getWorkers(filters = {}) {
@@ -112,4 +112,4 @@ class WorkerService {
     }
 }
 
-module.exports = WorkerService;
+export default WorkerService;

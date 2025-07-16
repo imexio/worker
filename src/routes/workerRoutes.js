@@ -1,9 +1,9 @@
-const express = require("express");
-const WorkerController = require("../controllers/workerController");
-const {
+import express from "express";
+import WorkerController from "../controllers/workerController.js";
+import {
     authenticateToken,
     requireRole,
-} = require("../middleware/authMiddleware");
+} from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
@@ -41,4 +41,4 @@ router.patch(
     WorkerController.updateAvailability
 );
 
-module.exports = router;
+export default router;

@@ -1,4 +1,4 @@
-const WorkerService = require("../services/workerService");
+import WorkerService from "../services/workerService.js";
 
 class WorkerController {
     static async getWorkers(req, res) {
@@ -112,4 +112,4 @@ class WorkerController {
     }
 }
 
-module.exports = WorkerController;
+export default WorkerController;

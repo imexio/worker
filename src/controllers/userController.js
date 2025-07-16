@@ -1,4 +1,4 @@
-const UserService = require("../services/userService");
+import UserService from "../services/userService.js";
 
 class UserController {
     static async getProfile(req, res) {
@@ -44,4 +44,4 @@ class UserController {
     }
 }
 
-module.exports = UserController;
+export default UserController;

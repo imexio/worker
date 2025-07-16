@@ -1,6 +1,6 @@
-const express = require("express");
-const UserController = require("../controllers/userController");
-const { authenticateToken } = require("../middleware/authMiddleware");
+import express from "express";
+import UserController from "../controllers/userController.js";
+import { authenticateToken } from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
@@ -10,4 +10,4 @@ router.get("/profile", authenticateToken, UserController.getProfile);
 // PUT /api/profile - Update user profile
 router.put("/profile", authenticateToken, UserController.updateProfile);
 
-module.exports = router;
+export default router;

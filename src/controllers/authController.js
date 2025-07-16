@@ -1,4 +1,4 @@
-const AuthService = require("../services/authService");
+import AuthService from "../services/authService.js";
 
 class AuthController {
     static async register(req, res) {
@@ -48,4 +48,4 @@ class AuthController {
     }
 }
 
-module.exports = AuthController;
+export default AuthController;

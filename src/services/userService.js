@@ -1,4 +1,4 @@
-const User = require("../models/User");
+import User from "../models/User.js";
 
 class UserService {
     static async getUserById(userId) {
@@ -32,4 +32,4 @@ class UserService {
     }
 }
 
-module.exports = UserService;
+export default UserService;

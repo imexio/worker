@@ -30,9 +30,9 @@ app.use((err, req, res, next) => {
     res.status(500).json({ message: "Something went wrong!" });
 });
 
-// app.use("*", (req, res) => {
-//     res.status(404).json({ message: "Route not found" });
-// });
+app.use("/{*any}", (req, res) => {
+    res.status(404).json({ message: "Route not found" });
+});
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
